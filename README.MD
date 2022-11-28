@@ -37,7 +37,7 @@ Before starting to install you need to see the minimum requirements, so between 
 ### Minimum Requirements
 
 `react-native` >= 0.63.0</br>
-`expo` >= 41</br>
+if you're using `expo` >= 41</br>
 if you're using `typescript` >= 4.x
 </br>
 
