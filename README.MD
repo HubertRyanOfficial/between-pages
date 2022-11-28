@@ -11,6 +11,10 @@ A library to help you animate and improve the user experience when is moved betw
 _I will show some applications with navigation libraries._
 https://i.imgur.com/mWCeaFC.gif
 
+<p align="center" style="font-size: 14px; font-weight: bold; margin: 40px 0px;">
+  PR's welcome 🔥
+</p>
+
 <div style="display: flex; flex-direction: row">
   <img src="https://i.imgur.com/mWCeaFC.gif" width="200" title="Whatsapp">
   <img src="https://i.imgur.com/MW8LTpO.gif" style="margin-left: 40px" width="200" title="Whatsapp">
