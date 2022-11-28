@@ -56,3 +56,11 @@ or
 ```sh
   yarn add between-pages
 ```
+
+### Expo
+
+If you're using Expo to build beautiful apps, you can execute like this:
+
+```sh
+  npx expo install between-pages
+```
