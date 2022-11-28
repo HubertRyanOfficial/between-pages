@@ -16,9 +16,13 @@ A library to help you animate and improve the user experience when is moved betw
 
 _I will show some applications with navigation libraries below._
 
-<p align="center" style="font-size: 14px; font-weight: bold; margin: 40px 0px;">
-  PR's welcome 🔥
-</p>
+- 🧪 **Well tested**
+  - every module is extensively tested both android and ios.
+- 👁 **Well typed**
+  - Everthing as strongly typed with typescript
+- 🔥 **PR's welcome**
+  - If you have any idea how we can improve this library, pls text me
+  - You can send pull requests or create a issue
 
 <div style="display: flex; flex-direction: row">
   <img src="https://i.imgur.com/mWCeaFC.gif" width="200" title="Whatsapp">
