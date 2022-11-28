@@ -6,7 +6,7 @@
 
 A library to help you animate and improve the user experience when is moved between pages with animations on react native apps. **Between Pages** uses the underlying native library called Animated from react native itself, thus allowing all animation between routes to be at high FPS.
 
-**Between Pages** was created to create animations from simple to complex levels before navigation, restoring the entire screen before every route, making the movement natural. Remembering that BetweenPages is not recommended for route management.
+**Between Pages** was developed to create animations from simple to complex levels before navigation, restoring the entire screen before every route, making the movement natural. Remembering that BetweenPages is not recommended for route management.
 
 _I will show some applications with navigation libraries._
 https://i.imgur.com/mWCeaFC.gif
