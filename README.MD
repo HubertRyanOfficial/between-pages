@@ -20,8 +20,6 @@ https://i.imgur.com/mWCeaFC.gif
 </div>
 
 </br>
-</br>
-</br>
 
 ## Getting Started
 
