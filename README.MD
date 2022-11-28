@@ -19,7 +19,7 @@ _I will show some applications with navigation libraries below._
 - 🧪 **Well tested**
   - every module is extensively tested both android and ios.
 - 👁 **Well typed**
-  - Everthing as strongly typed with typescript
+  - Everthing was strongly typed with typescript
 - 🔥 **PR's welcome**
   - If you have any idea how we can improve this library, pls text me
   - You can send pull requests or create a issue
