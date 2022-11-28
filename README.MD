@@ -64,3 +64,65 @@ If you're using Expo to build beautiful apps, you can execute like this:
 ```sh
   npx expo install between-pages
 ```
+
+## Usage
+
+First of all, before we start animating our screens to get some feedback later, we need to insert the Provider inside the root of the project. It's usually in `/App.js`.
+
+```jsx
+...
+
+import { BetweenPagesProvider } from "between-pages";
+
+export default function App() {
+  return (
+    <BetweenPagesProvider>
+      <Main />
+      {/*.........*/}
+    </BetweenPagesProvider>
+  );
+}
+```
+
+### First Transition
+
+In any screen that is already inside our general Provider, we can make a transition together with the Between Types, which are the types of transition that we can make with the page or screen that turns next.
+
+Let's see an example as if we were on a screen called Main, the next screen is Home. So we want an animated transition to the next screen using the **useBetweenPages** passing the next route component like first parameter:
+
+```jsx
+...
+
+import { useBetweenPages, BetweenTypes } from "between-pages";
+
+import Home from "./Home";
+
+const Main: React.FC = () => {
+  const { startTransition } = useBetweenPages(<Home />);
+
+  const handleAnimation = () => {
+    startTransition(
+      {
+        type: BetweenTypes.FADE,
+        duration: 3000,
+      },
+      () => {}
+    );
+  };
+
+  return (
+    <View style={styles.container}>
+      <Text
+        onPress={() => handleAnimation()}
+        style={{ fontSize: 30, fontWeight: "bold", color: "#FFFFFF" }}
+      >
+        Page 1
+      </Text>
+    </View>
+  );
+};
+
+...
+```
+
+In this case as we can se, importing the use...
