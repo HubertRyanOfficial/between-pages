@@ -8,7 +8,8 @@
     "build": "npx tsc --build",
     "clean": "npx tsc --build --clean",
     "tsc": "tsc -p tsconfig.json",
-    "dev": "npm run build && node -e require('./src/test.js')"
+    "dev": "npm run build && node -e require('./src/test.js')",
+    "release": "npm run clean && npm run build && npm version patch && npm publish"
   },
   "repository": {
     "type": "git",
