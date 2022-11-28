@@ -21,3 +21,19 @@ _I will show some applications with navigation libraries._
     <source src="https://i.imgur.com/7xHCHrO.mp4" type="video/mp4">
   </video>
 </div>
+
+</br>
+</br>
+</br>
+
+## Getting Started
+
+```sh
+  npm i between-pages
+```
+
+or
+
+```sh
+  yarn add between-pages
+```
