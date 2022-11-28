@@ -1,5 +1,5 @@
 import { createContext } from "react";
-import { ContextProps } from "../types";
+import { ContextProps } from "../@types";
 
 const BetweenContext = createContext<ContextProps | null>(null);
 

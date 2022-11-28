@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Animated, Dimensions } from "react-native";
-import { OptionsProps } from "../types";
+import { OptionsProps } from "../@types";
 
 import BetweenContext from "../utils/globalContext";
 import { animationTypes } from "../utils/animationTypes";

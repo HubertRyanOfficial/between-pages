@@ -2,7 +2,7 @@ import { useContext } from "react";
 
 import BetweenContext from "../utils/globalContext";
 
-import { HookProps, TransitionProps } from "../types";
+import { HookProps, TransitionProps } from "../@types";
 import { animationTypes as BetweenTypes } from "../utils/animationTypes";
 
 function useBetweenPages(component: any): HookProps {
