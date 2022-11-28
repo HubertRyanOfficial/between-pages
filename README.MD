@@ -26,6 +26,14 @@ _I will show some applications with navigation libraries below._
 
 ## Getting Started
 
+Before starting to install you need to see the minimum requirements, so between can work very well, check the versions below:
+
+### Minimum Requirements
+
+`react-native` >= 0.63.0</br>
+if you're using `typescript` >= 4.x
+</br>
+
 ```sh
   npm i between-pages
 ```
