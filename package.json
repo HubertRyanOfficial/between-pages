@@ -2,9 +2,13 @@
   "name": "@between-pages",
   "version": "1.0.0",
   "description": "A library to help you animate and improve the user experience when is moved between pages with animations on react native apps.",
-  "main": "index.js",
+  "main": "dist/index.ts",
+  "types": "dist/index.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "npx tsc --build",
+    "clean": "npx tsc --build --clean",
+    "tsc": "tsc -p tsconfig.json",
+    "dev": "npm run build && node -e require('./src/test.js')"
   },
   "repository": {
     "type": "git",
@@ -18,10 +22,23 @@
     "pages",
     "routes"
   ],
+  "peerDependencies": {
+    "react": "*",
+    "react-native": ">=0.59"
+  },
   "author": "Hubert Ryan",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/HubertRyanOfficial/between-pages/issues"
   },
-  "homepage": "https://github.com/HubertRyanOfficial/between-pages#readme"
+  "homepage": "https://github.com/HubertRyanOfficial/between-pages#readme",
+  "devDependencies": {
+    "@types/node": "^18.11.9",
+    "@types/react": "^18.0.25",
+    "@types/react-native": "^0.70.7",
+    "prettier": "^2.8.0",
+    "react": "^18.1.0",
+    "react-native": "^0.70.6",
+    "typescript": "^4.9.3"
+  }
 }
