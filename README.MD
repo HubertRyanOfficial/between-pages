@@ -2,6 +2,12 @@
   <img src="https://imgur.com/wTw19yZ.png" width="720" title="Whatsapp">
 </p>
 
+<p align="center">
+  <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-blue.svg"></a>
+  <a href="https://github.com/HubertRyanOfficial/between-pages"><img src="https://img.shields.io/github/stars/HubertRyanOfficial/between-pages"></a>
+  <a href="https://www.npmjs.com/package/between-pages"><img src="https://img.shields.io/npm/dm/between-pages.svg"></a> 
+</p>
+
 # Between Pages
 
 A library to help you animate and improve the user experience when is moved between pages with animations on react native apps. **Between Pages** uses the underlying native library called Animated from react native itself, thus allowing all animation between routes to be at high FPS.
