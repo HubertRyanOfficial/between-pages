@@ -8,7 +8,7 @@ A library to help you animate and improve the user experience when is moved betw
 
 **Between Pages** was developed to create animations from simple to complex levels before navigation, restoring the entire screen before every route, making the movement natural. Remembering that BetweenPages is not recommended for route management.
 
-_I will show some applications with navigation libraries._
+_I will show some applications with navigation libraries below._
 
 <p align="center" style="font-size: 14px; font-weight: bold; margin: 40px 0px;">
   PR's welcome 🔥
