@@ -1,6 +1,6 @@
 {
   "name": "between-pages",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "A library to help you animate and improve the user experience when is moved between pages with animations on react native apps.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
