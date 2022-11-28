@@ -1,5 +1,7 @@
 export interface TransitionProps {
   type?: string;
+  delay?: number;
+  duration?: number;
   endAnimation?: boolean;
 }
 

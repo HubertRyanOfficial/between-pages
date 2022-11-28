@@ -24,6 +24,8 @@ function BetweenPagesProvider({ children }) {
       ) {
         Animated.timing(animation, {
           toValue: 1,
+          delay: options?.delay,
+          duration: options?.duration,
           useNativeDriver: true,
         }).start(() => {
           if (options.endAnimation) {
@@ -37,6 +39,7 @@ function BetweenPagesProvider({ children }) {
         Animated.spring(animation, {
           toValue: 1,
           friction: 3,
+          delay: options?.delay,
           useNativeDriver: false,
         }).start(() => {
           if (options.endAnimation) {
