@@ -9,17 +9,13 @@ A library to help you animate and improve the user experience when is moved betw
 **Between Pages** was created to create animations from simple to complex levels before navigation, restoring the entire screen before every route, making the movement natural. Remembering that BetweenPages is not recommended for route management.
 
 _I will show some applications with navigation libraries._
+https://i.imgur.com/mWCeaFC.gif
 
 <div style="display: flex; flex-direction: row">
-  <video width="200" autoplay loop>
-    <source src="https://i.imgur.com/WvtHn57.mp4" type="video/mp4">
-  </video>
-  <video width="200" autoplay loop style="margin-left: 40px">
-    <source src="https://i.imgur.com/xNmzP2S.mp4" type="video/mp4">
-  </video>
-  <video width="200" autoplay loop style="margin-left: 40px">
-    <source src="https://i.imgur.com/7xHCHrO.mp4" type="video/mp4">
-  </video>
+  <img src="https://i.imgur.com/mWCeaFC.gif" width="200" title="Whatsapp">
+  <img src="https://i.imgur.com/MW8LTpO.gif" style="margin-left: 40px" width="200" title="Whatsapp">
+  <img src="https://i.imgur.com/0BQgNcd.gif" style="margin-left: 40px" width="200" title="Whatsapp">
+ 
 </div>
 
 </br>
