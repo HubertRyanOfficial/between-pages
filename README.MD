@@ -34,6 +34,8 @@ Before starting to install you need to see the minimum requirements, so between 
 if you're using `typescript` >= 4.x
 </br>
 
+### Installation
+
 ```sh
   npm i between-pages
 ```
