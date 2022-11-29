@@ -217,6 +217,15 @@ const Main: React.FC = () => {
 
 As I said above, the endAnimation helps to make the navigation with a great performance when changing routes, making the animation not hide the next screen.
 
+## Contributing
+
+Reporting Bugs
+
+You can't write code without writing the occasional bug. Especially as Betweeng Pages is moving quickly, bugs happen. When you think you've found one here's what to do:
+
+- Search the existing issues for one like what you're seeing. If you see one, there are no other issues like yours then create a new one here: https://github.com/HubertRyanOfficial/between-pages/issues. 
+
+
 ## You got it! 👍😁
 
 Thank you very much, I hope I have helped the great React community. ❤🙌
