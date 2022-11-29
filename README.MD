@@ -143,12 +143,12 @@ import {  BetweenTypes } from "between-pages";
 
 Now here, you specify all types of properties beyond a simple animation type in the **startTransition** function in first parameter.
 
-| Name         | Type     | Description                                                                                                                                                                          | Default value     |
-| ------------ | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------- |
-| type         | String   | Between Types is a type of a specific animation that can be access importing, all types is below.                                                                                    | BetweenTypes.FADE |
-| endAnimation | boolean  | With this proprety we can specific if when animation is finished if the component must stay or return to initial state, this is useful when we want a navigation after an animation. | true              |
-| delay        | function | Delay in miliseconds to start the transition applied.                                                                                                                                | 0                 |
-| duration     | function | Duration in miliseconds of one transition applied.                                                                                                                                   | 500               |
+| Name         | Type    | Description                                                                                                                                                                          | Default value     |
+| ------------ | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------- |
+| type         | String  | Between Types is a type of a specific animation that can be access importing, all types is below.                                                                                    | BetweenTypes.FADE |
+| endAnimation | boolean | With this proprety we can specific if when animation is finished if the component must stay or return to initial state, this is useful when we want a navigation after an animation. | true              |
+| delay        | Number  | Delay in miliseconds to start the transition applied.                                                                                                                                | 0                 |
+| duration     | Number  | Duration in miliseconds of one transition applied.                                                                                                                                   | 500               |
 
 The last and second parameter, as I left it in the code comments above, is a **callback** that is always called when an animation is finished. I'll leave an example further down on how this is useful along with a navigation using react-navigation.
 
