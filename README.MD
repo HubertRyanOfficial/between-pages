@@ -102,10 +102,12 @@ const Main: React.FC = () => {
 
   const handleAnimation = () => {
     startTransition(
+      // First parameter are animation type, duration and others thing about animations.
       {
         type: BetweenTypes.FADE,
         duration: 3000,
       },
+      // Second parameter is a callback that happens when the animation is finished.
       () => {}
     );
   };
@@ -125,4 +127,44 @@ const Main: React.FC = () => {
 ...
 ```
 
-In this case as we can se, importing the use...
+In this case as we can se, importing the **useBetweenPages** you can specify the component that will be animated. All types of animations are inside the **BetweenTypes** object, further below are all types of animations that exist for now.
+
+You can access the types of animations in this way below:
+
+```jsx
+...
+
+import {  BetweenTypes } from "between-pages";
+
+...
+```
+
+### Transistion Configurable properties
+
+Now here, you specify all types of properties beyond a simple animation type in the **startTransition** function in first parameter.
+
+| Name         | Type     | Description                                                                                                                                                                          | Default value     |
+| ------------ | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------- |
+| type         | String   | Between Types is a type of a specific animation that can be access importing, all types is below.                                                                                    | BetweenTypes.FADE |
+| endAnimation | boolean  | With this proprety we can specific if when animation is finished if the component must stay or return to initial state, this is useful when we want a navigation after an animation. | true              |
+| delay        | function | Delay in miliseconds to start the transition applied.                                                                                                                                | 0                 |
+| duration     | function | Duration in miliseconds of one transition applied.                                                                                                                                   | 500               |
+
+The last and second parameter, as I left it in the code comments above, is a **callback** that is always called when an animation is finished. I'll leave an example further down on how this is useful along with a navigation using react-navigation.
+
+| Type     | Description                                           | Default value |
+| -------- | ----------------------------------------------------- | ------------- |
+| Function | Callback that happens when the animation is finished. | null          |
+
+### All of Between Types
+
+These are all types of animation that can be used easily:
+
+| Name      | Description                             | value                 |
+| --------- | --------------------------------------- | --------------------- |
+| FADE      | A transistion moving opacity up 0 to 1  | BetweenTypes.FADE     |
+| SPRING    | A transistion moving scale up 0.1 to 1  | BetweenTypes.SPRING   |
+| TO UP     | A transistion moving from bottom to top | BetweenTypes.TOUP     |
+| TO BOTTOM | A transistion moving from top to bottom | BetweenTypes.TOBOTTOM |
+| LEFT      | A transistion moving from right to left | BetweenTypes.LEFT     |
+| RIGHT     | A transistion moving from left to right | BetweenTypes.RIGHT    |
