@@ -69,7 +69,7 @@ If you're using Expo to build beautiful apps, you can execute like this:
 
 First of all, before we start animating our screens to get some feedback later, we need to insert the Provider inside the root of the project. It's usually in `/App.js`.
 
-```jsx
+```tsx
 ...
 
 import { BetweenPagesProvider } from "between-pages";
@@ -90,7 +90,7 @@ In any screen that is already inside our general Provider, we can make a transit
 
 Let's see an example as if we were on a screen called Main, the next screen is Home. So we want an animated transition to the next screen using the **useBetweenPages** passing the next route component like first parameter:
 
-```jsx
+```tsx
 ...
 
 import { useBetweenPages, BetweenTypes } from "between-pages";
@@ -131,7 +131,7 @@ In this case as we can se, importing the **useBetweenPages** you can specify the
 
 You can access the types of animations in this way below:
 
-```jsx
+```tsx
 ...
 
 import {  BetweenTypes } from "between-pages";
@@ -150,7 +150,7 @@ Now here, you specify all types of properties beyond a simple animation type in 
 | delay        | Number  | Delay in miliseconds to start the transition applied.                                                                                                                                | 0                 |
 | duration     | Number  | Duration in miliseconds of one transition applied.                                                                                                                                   | 500               |
 
-The last and second parameter, as I left it in the code comments above, is a **callback** that is always called when an animation is finished. I'll leave an example further down on how this is useful along with a navigation using react-navigation.
+The last and second parameter, as I left it in the code comments above, is a **callback** that is always called when an animation is finished. I'll leave an example further down on how this is useful along with a navigation using [react-navigation](https://reactnavigation.org/).
 
 | Type     | Description                                           | Default value |
 | -------- | ----------------------------------------------------- | ------------- |
@@ -168,3 +168,59 @@ These are all types of animation that can be used easily:
 | TO BOTTOM | A transistion moving from top to bottom | BetweenTypes.TOBOTTOM |
 | LEFT      | A transistion moving from right to left | BetweenTypes.LEFT     |
 | RIGHT     | A transistion moving from left to right | BetweenTypes.RIGHT    |
+
+## Using BetweenPages with react-navigation
+
+Between pages was developed to facilitate an animation between components before a navigation or before some event. Yeah, there's a good way to implement the two together which is with react-native-navigation.
+
+First of all you need to install and configure your route stack with react-navigation, all the documentation about that is in the react-navigation [documentation](https://reactnavigation.org/docs/hello-react-navigation).
+
+```tsx
+...
+
+import { useNavigation } from '@react-navigation/native';
+import { useBetweenPages, BetweenTypes } from "between-pages";
+
+import Home from "./Home";
+
+const Main: React.FC = () => {
+  const navigation = useNavigation();
+  const { startTransition } = useBetweenPages(<Home />);
+
+  const handleAnimation = () => {
+    startTransition(
+      {
+        type: BetweenTypes.FADE,
+        endAnimation: false,
+        duration: 3000,
+      },
+      () => {
+        navigation.navigate("Home");
+      }
+    );
+  };
+
+  return (
+    <View style={styles.container}>
+      <Text
+        onPress={() => handleAnimation()}
+        style={{ fontSize: 30, fontWeight: "bold", color: "#fff" }}
+      >
+        Page 1
+      </Text>
+    </View>
+  );
+};
+
+
+```
+
+As I said above, the endAnimation helps to make the navigation with a great performance when changing routes, making the animation not hide the next screen.
+
+## You got it! 👍😁
+
+Thank you very much, I hope I have helped the great React community. ❤🙌
+
+<p align="center">
+  <img src="https://imgur.com/nIAoYGc.png" width="300" title="Whatsapp">
+</p>
