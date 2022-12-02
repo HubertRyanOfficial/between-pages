@@ -24,6 +24,11 @@ _I will show some applications with navigation libraries below._
   - If you have any idea how we can improve this library, pls text me
   - You can send pull requests or create an issue
 
+<a align="center" href='https://ko-fi.com/hubertryan' target='_blank'>
+    <img height='36' style='border:0px;height:36px;' src='https://az743702.vo.msecnd.net/cdn/kofi2.png?v=0' border='0' alt='Buy Me a Coffee at ko-fi.com' />
+  </a>
+</br>
+
 <div style="display: flex; flex-direction: row">
   <img src="https://i.imgur.com/mWCeaFC.gif" width="200">
   <img src="https://i.imgur.com/MW8LTpO.gif" style="margin-left: 40px" width="200">
@@ -31,11 +36,6 @@ _I will show some applications with navigation libraries below._
   <img src="https://i.imgur.com/LwZ9jh2.gif" style="margin-left: 40px" width="200">
  
 </div>
-
-<a align="center" href='https://ko-fi.com/hubertryan' target='_blank'>
-    <img height='36' style='border:0px;height:36px;' src='https://az743702.vo.msecnd.net/cdn/kofi2.png?v=0' border='0' alt='Buy Me a Coffee at ko-fi.com' />
-  </a>
-</br>
 
 ## Getting Started
 
