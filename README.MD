@@ -251,7 +251,6 @@ const WrapperExamples: React.FC = () => {
       </Wrapper>
       <Wrapper
         delay={300}
-        type={BetweenTypes.FADE}
         onPress={() => {}}
         type={BetweenTypes.FADE}
         >
