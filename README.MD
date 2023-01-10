@@ -43,7 +43,14 @@ _I will show some applications with navigation libraries below._
 
 Now in the new version of Between Pages, in addition to animating and making transitions, you can animate button clicks. Very easy to implement and a very good result on FPS. See the example below:
 
-<img src="https://imgur.com/W9enbCI.gif" width="200">
+<br/>
+
+<div style="display: flex; flex-direction: row">
+  <img src="https://imgur.com/vk8wVi8.gif" width="200">
+  <img src="https://imgur.com/AViQsqP.gif" width="200" style="margin-left: 40px">
+</div>
+
+<br/>
 
 All types of animation are in Between Types, below I will be explaining the implementation. Before you start animating screen or buttons you need to go through the initial steps.
 
