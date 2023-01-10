@@ -6,3 +6,8 @@ export const animationTypes = {
   TORIGHT: "TORIGHT",
   TOBOTTOM: "TOBOTTOM",
 };
+
+export const animationTypesSupportedByWrapper = {
+  FADE: "FADE",
+  SPRING: "SPRING",
+};

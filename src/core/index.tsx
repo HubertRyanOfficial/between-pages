@@ -7,6 +7,47 @@ import { animationTypes } from "../utils/animationTypes";
 
 const { width, height } = Dimensions.get("window");
 
+function getStyleStructureByType(animation, type) {
+  if (type == animationTypes.TOLEFT || type == animationTypes.TORIGHT) {
+    return {
+      transform: [
+        {
+          translateX: animation.interpolate({
+            inputRange: [0, 1],
+            outputRange: [
+              type == animationTypes.TORIGHT
+                ? -Math.abs(width * 2 + 100)
+                : width * 2 + 100,
+              0,
+            ],
+          }),
+        },
+      ],
+    };
+  }
+
+  if (type == animationTypes.TOUP || type == animationTypes.TOBOTTOM) {
+    return {
+      transform: [
+        {
+          translateY: animation.interpolate({
+            inputRange: [0, 1],
+            outputRange: [
+              type == animationTypes.TOBOTTOM
+                ? -Math.abs(height * 2)
+                : height * 2,
+              0,
+            ],
+          }),
+        },
+      ],
+    };
+  }
+  return {
+    transform: [{ scale: animation }],
+  };
+}
+
 function BetweenPagesProvider({ children }) {
   const animation = useRef(new Animated.Value(0)).current;
   const [options, setOptions] = useState<OptionsProps | null>();
@@ -71,57 +112,7 @@ function BetweenPagesProvider({ children }) {
       {children}
       {!!options && (
         <Animated.View
-          style={[
-            {
-              flex: 1,
-              position: "absolute",
-              top: 0,
-              bottom: 0,
-              left: 0,
-              right: 0,
-            },
-            options?.type == animationTypes.SPRING
-              ? {
-                  transform: [{ scale: animation }],
-                }
-              : options?.type == animationTypes.TOUP ||
-                options?.type == animationTypes.TOBOTTOM
-              ? {
-                  transform: [
-                    {
-                      translateY: animation.interpolate({
-                        inputRange: [0, 1],
-                        outputRange: [
-                          options?.type == animationTypes.TOBOTTOM
-                            ? -Math.abs(height * 2)
-                            : height * 2,
-                          0,
-                        ],
-                      }),
-                    },
-                  ],
-                }
-              : options?.type == animationTypes.TOLEFT ||
-                options?.type == animationTypes.TORIGHT
-              ? {
-                  transform: [
-                    {
-                      translateX: animation.interpolate({
-                        inputRange: [0, 1],
-                        outputRange: [
-                          options?.type == animationTypes.TORIGHT
-                            ? -Math.abs(width * 2 + 100)
-                            : width * 2 + 100,
-                          0,
-                        ],
-                      }),
-                    },
-                  ],
-                }
-              : {
-                  opacity: animation,
-                },
-          ]}
+          style={getStyleStructureByType(animation, options?.type)}
         >
           {options?.componentChildren}
         </Animated.View>

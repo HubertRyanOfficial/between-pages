@@ -5,7 +5,7 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "build": "npx tsc --build",
+    "build": "npm run clean; npx tsc --build",
     "clean": "npx tsc --build --clean",
     "tsc": "tsc -p tsconfig.json",
     "dev": "npm run build && node -e require('./src/test.js')",
