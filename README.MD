@@ -37,13 +37,23 @@ _I will show some applications with navigation libraries below._
  
 </div>
 
+<br/>
+
+## Animating Buttons Clicks with Between Wrapper
+
+Now in the new version of Between Pages, in addition to animating and making transitions, you can animate button clicks. Very easy to implement and a very good result on FPS. See the example below:
+
+<img src="https://imgur.com/W9enbCI.gif" width="200">
+
+All types of animation are in Between Types, below I will be explaining the implementation. Before you start animating screen or buttons you need to go through the initial steps.
+
 ## Getting Started
 
 Before starting to install you need to see the minimum requirements, so between can work very well, check the versions below:
 
 ### Minimum Requirements
 
-`react-native` >= 0.59</br>
+`react-native` >= 0.59</>
 if you're using `expo` >= 41</br>
 if you're using `typescript` >= 4.x
 </br>
@@ -220,14 +230,71 @@ const Main: React.FC = () => {
 
 As I said above, the endAnimation helps to make the navigation with a great performance when changing routes, making the animation not hide the next screen.
 
+## Buttons clicks animated
+
+To start animating button clicks with Between Types, you must import the Wrapper and add it around your component as a button. In this way:
+
+```tsx
+...
+
+import { Wrapper, BetweenTypes } from "between-pages";
+
+const WrapperExamples: React.FC = () => {
+  return (
+    <View style={styles.container}>
+      <Wrapper
+        delay={100}
+        onPress={() => {}}
+        type={BetweenTypes.SPRING}
+        >
+        <Button title="Click me" backgroundColor="#D4C1EC" />
+      </Wrapper>
+      <Wrapper
+        delay={300}
+        type={BetweenTypes.FADE}
+        onPress={() => {}}
+        type={BetweenTypes.FADE}
+        >
+        <Button title="Click me" backgroundColor="#FEFFBE" />
+      </Wrapper>
+    </View>
+  );
+};
+
+const Button = ({
+  title,
+  backgroundColor = "#FFFFFF",
+}: {
+  title: string;
+  backgroundColor?: string;
+}) => {
+  return (
+    <View
+      style={[
+        styles.button,
+        {
+          backgroundColor,
+        },
+      ]}
+    >
+      <Text style={styles.title}>{title}</Text>
+    </View>
+  );
+};
+
+...
+
+```
+
+Be careful when using this type of animation, because the Wrapper only accepts two types, **SPRING** and **FADE**.
+
 ## Contributing
 
 Reporting Bugs
 
 You can't write code without writing the occasional bug. Especially as Betweeng Pages is moving quickly, bugs happen. When you think you've found one here's what to do:
 
-- Search the existing issues for one like what you're seeing. If you see one, there are no other issues like yours then create a new one here: https://github.com/HubertRyanOfficial/between-pages/issues. 
-
+- Search the existing issues for one like what you're seeing. If you see one, there are no other issues like yours then create a new one here: https://github.com/HubertRyanOfficial/between-pages/issues.
 
 ## You got it! 👍😁
 
